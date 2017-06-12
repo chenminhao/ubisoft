@@ -1,0 +1,448 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>商城首页</title>
+	<link rel="stylesheet" href="css/reset.css">
+	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="css/shop.css">
+	<link rel="stylesheet" type="text/css" href="css/reset.css"/>
+	<link rel="stylesheet" type="textshowoLi/css" href="css/style.css"/>
+	<link rel="stylesheet" type="text/css" href="css/banner.css"/>
+		
+	<script src="js/jquery-1.7.2.js"></script>
+	<script src="js/banner.js"></script>
+  <script src="js/shop.js" defer></script>
+</head>
+<body>
+		 <header>
+  			<nav>
+  				<img src="./images/logo.jpg" alt="">
+  			<div>
+  			<span></span>
+  				<a href="#">搜索游戏</a>
+  			</div>
+       <!-- <ol class="sub">
+        <li><a href="javascript:void(0);">首页</a></li>
+        <li><a href="javascript:void(0);">游戏</a><button><span></span></button>
+        <li class="subnavs">
+            <div>主机游戏</div>
+            <div>PC游戏</div>
+            <div>移动游戏</div>
+            <div>VR游戏</div>
+        </li>
+        </li>
+        <li><a href="javascript:void(0);">商城</a></li>
+        <li><a href="javascript:void(0);">支持</a></li>
+      </ol> -->
+      <ul class="tran">
+        <li><a href="index.html">首页</a></li>
+        <li><a href="javascript:void(0);">游戏</a><button><span></span></button>
+        </li>
+        <li><a href="javascript:void(0);">商城</a></li>
+        <li><a href="javascript:void(0);">支持</a></li>
+      </ul>
+  	</nav>
+    <!--二级菜单-->
+    <ul class="subnav">
+        <li><a href="javascript:void(0);">主机游戏</a></li>
+        <li><a href="javascript:void(0);">PC游戏</a></li>
+        <li><a href="javascript:void(0);">移动游戏</a></li>
+        <li><a href="javascript:void(0);">VR游戏</a></li>
+    </ul>
+    <!--搜索框-->
+    <div class="search" style="overflow: scroll;">
+     <input id="search" type="text" placeholder="请输入关键字">
+     <ol id="list"></ol>
+    </div>
+    <script>
+      var btn = document.getElementById('search');
+      function fn(data){
+
+      var li = '';
+      for(var i = 0 ; i < data.s.length;i++){
+
+      li+='<li>'
+        li+='<a target="_blank" href="#">'+data.s[i]+'</a>'
+      li+='</li>'
+
+    }
+
+    document.getElementById('list').innerHTML = li;
+    }
+
+    btn.onkeyup = function() {
+    var lianjie = document.createElement('script');
+    lianjie.src = 'https://sp0.baidu.com/5a1Fazu8AA54nxGko9WTAnF6hhy/su?wd='+this.value+'&sugmode=2&json=1&p=3&sid=22085_1437_12896_21081_17001_22037_21670_20930&req=2&pbs=aaa&csor=0&pwd=aaa&cb=fn';
+    // lianjie.src='http://www.ubisoft.com.cn/news2/search_name?game_keyword='+this.value+'';
+    document.body.appendChild(lianjie);
+  }
+  </script>
+   <div class="shopp">
+    	<div>
+    		<a href="javascript:void(0);"><span></span> 商城首页</a>
+    	</div>
+    	<ul>
+    		<li><a href="javascript:void(0);">我的订单</a></li>
+    		<li><a href="javascript:void(0);">购物车(0)</a></li>
+    		<li><span></span></li>
+    	</ul>
+    </div>
+    <div id="Carousel">
+    	<div id="container">
+			<img src="picture/tctd.jpg" alt=""  style="display: block;"/>
+			<img src="picture/tbd.jpg" alt=""  style="display: block;"/>
+			<img src="picture/steep.jpg" alt=""  style="display: block;"/>
+			<img src="picture/startrek.jpg" alt=""  style="display: block;"/>
+			<img src="picture/sp2.jpg" alt=""  style="display: block;"/>
+			<img src="picture/rcr.jpg" alt=""  style="display: block;"/>
+			<img src="picture/sp2.jpg" alt=""  style="display: block;"/>
+			
+			
+			<button id="left"></button>
+			<button id="right"></button>
+		  </div>
+    </div>
+    <div  class="nav">
+          <div>
+            <p><span>游戏类型:</span>全部<b></b></p>
+            <p><span>游戏品牌:</span>全部<b></b></p>
+          </div>
+          <ul>
+            <li><a href="##">策略</a></li>
+            <li><a href="##">动作</a></li>
+            <li><a href="##">休闲</a></li>
+            <li><a href="##">模拟</a></li>
+            <li><a href="##">第一人称射击</a></li>
+            <li><a href="##">竞速</a></li>
+            <li><a href="##">横版</a></li>
+            <li><a href="##">家庭</a></li>
+            <li><a href="##">经营</a></li>
+            <li><a href="##">角色扮演</a></li>
+            <li><a href="##">电影改编</a></li>
+            <li><a href="##">冒险</a></li>
+          </ul>
+          <ul>
+            <li><a href="##">幽灵行动</a></li>
+            <li><a href="##">细胞分裂</a></li>
+            <li><a href="##">工人物语</a></li>
+            <li><a href="##">彩虹六号</a></li>
+            <li><a href="##">孤岛惊魂</a></li>
+            <li><a href="##">手足兄弟连</a></li>
+            <li><a href="##">波斯王子</a></li>
+            <li><a href="##">雷曼</a></li>
+            <li><a href="##">英雄无敌</a></li>
+            <li><a href="##">模拟飞行</a></li>
+            <li><a href="##">光之子</a></li>
+            <li><a href="##">特技摩托</a></li>
+          </ul>
+    </div>
+    <div class="main-1">
+      <div class="select">
+        <ul class="choose">
+          <li>热销产品</li>
+          <li>促销产品</li>
+        </ul>
+        <div class="one">
+            <div>
+              <a href="javascript:void(0);"><img src="./picture/original_1470130167 (2).jpg" alt=""></a>
+              <div>
+                <h3><a href="javascript:void(0);">英雄无敌7完美典藏版[数字版]</a></h3>
+                <p>现价：89.00 元</p>
+              </div>
+              <button>立即购买</button>
+            </div>
+           <div>
+              <a href="javascript:void(0);"><img src="./picture/original_1470129903 (2).jpg" alt=""></a>
+              <div>
+                <h3><a href="javascript:void(0);">英雄无敌7：烈火试炼[数字版]</a></h3><p>现价：39.00 元</p>
+              </div>
+              <button>立即购买</button>
+          </div>
+            <div>
+              <a href="particulars.html"><img src="./picture/original_1470223579.jpg" alt=""></a>
+              <div>
+                <h3><a href="particulars.html">《英雄无敌7》完美典藏大礼包</a></h3><p>现价：208.00 元</p>
+              </div>
+              <button>立即购买</button>
+          </div>
+            <div>
+              <a href="javascript:void(0);"><img src="./picture/original_1470193860.jpg" alt=""></a>
+              <div>
+                <h3><a href="javascript:void(0);">英雄无敌7完美典藏版+英雄无敌6</a></h3><p>现价：178.00 元</p>
+              </div>
+              <button>立即购买</button>
+          </div>
+            <div>
+              <a href="javascript:void(0);"><img src="./picture/original_1392780699.jpg" alt=""></a>
+              <div>
+                <h3><a href="javascript:void(0);">雷曼：传奇[数字版]</a></h3><p>现价：49.00 元</p>
+              </div>
+              <button>立即购买</button>
+          </div>
+            <div>
+              <a href="javascript:void(0);"><img src="./picture/original_1399974669.jpg" alt=""></a>
+              <div>
+                <h3><a href="javascript:void(0);">魔法门10：传承 豪华版[数字版]</a></h3><p>现价：59.00 元</p>
+              </div>
+              <button>立即购买</button>
+          </div>
+            <div>
+              <a href="javascript:void(0);"><img src="./picture/original_1430127290.jpg" alt=""></a>
+              <div>
+                <h3><a href="javascript:void(0);">特技摩托：聚变 - 完整版（含季票</a></h3><p>现价：90.00 元</p>
+              </div>
+              <button>立即购买</button>
+          </div>
+            <div>
+              <a href="javascript:void(0);"><img src="./picture/original_1399968084.jpg" alt=""></a>
+              <div>
+                <h3><a href="javascript:void(0);">魔法门10：传承 标准版[数字版]</a></h3><p>现价：49.00 元</p>
+              </div>
+              <button>立即购买</button>
+          </div> 
+      </div>
+       <div class="two" style="display: none;">
+            <div>
+              <a href="javascript:void(0);"><img src="./picture/original_1353394547.jpg" alt=""></a>
+              <div>
+                <h3><a href="javascript:void(0);">英雄无敌4[数字版]</a></h3><p>现价：100.00 元</p>
+              </div>
+              <button>立即购买</button>
+          </div> 
+          <div>
+              <a href="javascript:void(0);"><img src="./picture/original_1353394628.jpg" alt=""></a>
+              <div>
+                <h3><a href="javascript:void(0);">英雄无敌4：暴风前夕[数字版]</a></h3><p>现价：49.00 元</p>
+              </div>
+              <button>立即购买</button>
+          </div> 
+           <div>
+              <a href="javascript:void(0);"><img src="./picture/original_1353394708.jpg" alt=""></a>
+              <div>
+                <h3><a href="javascript:void(0);">英雄无敌4：疾风战场[数字版]</a></h3><p>现价：49.00 元</p>
+              </div>
+              <button>立即购买</button>
+          </div> 
+           <div>
+              <a href="javascript:void(0);"><img src="./picture/original_1353395383.jpg" alt=""></a>
+              <div>
+                <h3><a href="javascript:void(0);">波斯王子：王者无双[数字版]</a></h3><p>现价：39.00 元</p>
+              </div>
+              <button>立即购买</button>
+          </div> 
+           <div>
+              <a href="javascript:void(0);"><img src="./picture/original_1353395239.jpg" alt=""></a>
+              <div>
+                <h3><a href="javascript:void(0);">波斯王子：武者之心[数字版]</a></h3><p>现价：29.00 元</p>
+              </div>
+              <button>立即购买</button>
+          </div> 
+           <div>
+              <a href="javascript:void(0);"><img src="./picture/original_1353397863.jpg" alt=""></a>
+              <div>
+                <h3><a href="javascript:void(0);">孤岛惊魂[数字版]</a></h3><p>现价：149.00 元</p>
+              </div>
+              <button>立即购买</button>
+          </div> 
+           <div>
+              <a href="javascript:void(0);"><img src="./picture/original_1353398674.jpg" alt=""></a>
+              <div>
+                <h3><a href="javascript:void(0);">幽灵行动[数字版]</a></h3><p>现价：40.00 元</p>
+              </div>
+              <button>立即购买</button>
+          </div> 
+           <div>
+              <a href="javascript:void(0);"><img src="./picture/original_1353397600.jpg" alt=""></a>
+              <div>
+                <h3><a href="javascript:void(0);">幽灵行动:沙漠之鹰[数字版]</a></h3><p>现价：49.00 元</p>
+              </div>
+              <button>立即购买</button>
+          </div> 
+
+      </div>
+      </div> 
+      <!--右边--> 
+      <div>
+          <h1><a href="">新游专区</a></h1>
+           <div>
+              <a href="javascript:void(0);"><img src="./images/original_1470130167.jpg" alt=""></a>
+              <div>
+                <h3><a href="javascript:void(0);">英雄无敌7完美典藏版[数字版]</a></h3><p>现价：49.00 元</p>
+              </div>
+              <button>立即购买</button>
+          </div> 
+          <div>
+              <a href="javascript:void(0);"><img src="./images/original_1470129903.jpg" alt=""></a>
+              <div>
+                <h3><a href="javascript:void(0);">英雄无敌7：烈火试炼[数字版]</a></h3><p>现价：49.00 元</p>
+              </div>
+              <button>立即购买</button>
+          </div> 
+          <div>
+              <a href="javascript:void(0);"><img src="./picture/original_1448938851.jpg" alt=""></a>
+              <div>
+                <h3><a href="javascript:void(0);">英雄无敌7[数字版]</a></h3><p>现价：49.00 元</p>
+              </div>
+              <button>立即购买</button>
+          </div> 
+      </div>
+  </div>
+  <div class="clear"></div>
+  <div class="main-2">
+       <div>
+          <h1><a href="">精彩实体专区</a></h1>
+           <div>
+              <a href="javascript:void(0);"><img src="./picture/original_1399968084.jpg" alt=""></a>
+              <div>
+                <h3><a href="javascript:void(0);">魔法门10：传承 标准版[数字版]</a></h3><p>现价：49.00 元</p>
+              </div>
+              <button>立即购买</button>
+          </div> 
+          <div>
+              <a href="javascript:void(0);"><img src="./picture/original_1399968084.jpg" alt=""></a>
+              <div>
+                <h3><a href="javascript:void(0);">魔法门10：传承 标准版[数字版]</a></h3><p>现价：49.00 元</p>
+              </div>
+              <button>立即购买</button>
+          </div> 
+          <div>
+              <a href="javascript:void(0);"><img src="./picture/original_1399968084.jpg" alt=""></a>
+              <div>
+                <h3><a href="javascript:void(0);">魔法门10：传承 标准版[数字版]</a></h3><p>现价：49.00 元</p>
+              </div>
+              <button>立即购买</button>
+          </div> 
+          <div>
+              <a href="javascript:void(0);"><img src="./picture/original_1399968084.jpg" alt=""></a>
+              <div>
+                <h3><a href="javascript:void(0);">魔法门10：传承 标准版[数字版]</a></h3><p>现价：49.00 元</p>
+              </div>
+              <button>立即购买</button>
+          </div> 
+          <div>
+              <a href="javascript:void(0);"><img src="./picture/original_1399968084.jpg" alt=""></a>
+              <div>
+                <h3><a href="javascript:void(0);">魔法门10：传承 标准版[数字版]</a></h3><p>现价：49.00 元</p>
+              </div>
+              <button>立即购买</button>
+          </div> 
+          <div>
+              <a href="javascript:void(0);"><img src="./picture/original_1399968084.jpg" alt=""></a>
+              <div>
+                <h3><a href="javascript:void(0);">魔法门10：传承 标准版[数字版]</a></h3><p>现价：49.00 元</p>
+              </div>
+              <button>立即购买</button>
+          </div> 
+
+          <div>
+              <a href="javascript:void(0);"><img src="./picture/original_1399968084.jpg" alt=""></a>
+              <div>
+                <h3><a href="javascript:void(0);">魔法门10：传承 标准版[数字版]</a></h3><p>现价：49.00 元</p>
+              </div>
+              <button>立即购买</button>
+          </div> 
+          <div>
+              <a href="javascript:void(0);"><img src="./picture/original_1399968084.jpg" alt=""></a>
+              <div>
+                <h3><a href="javascript:void(0);">魔法门10：传承 标准版[数字版]</a></h3><p>现价：49.00 元</p>
+              </div>
+              <button>立即购买</button>
+          </div> 
+          <div>
+              <a href="javascript:void(0);"><img src="./picture/original_1399968084.jpg" alt=""></a>
+              <div>
+                <h3><a href="javascript:void(0);">魔法门10：传承 标准版[数字版]</a></h3><p>现价：49.00 元</p>
+              </div>
+              <button>立即购买</button>
+          </div> 
+          <div>
+              <a href="javascript:void(0);"><img src="./picture/original_1399968084.jpg" alt=""></a>
+              <div>
+                <h3><a href="javascript:void(0);">魔法门10：传承 标准版[数字版]</a></h3><p>现价：49.00 元</p>
+              </div>
+              <button>立即购买</button>
+          </div> 
+      </div>
+  </div>
+   <footer>
+  <section>
+        <ul class="Code">
+            <li><a href="javascript:void(0);" ><div><img src="./picture/ubi_mobile_qr.jpg"></div>育碧中国微信公众号</a></li>
+            <li><a href="javascript:void(0);" >育碧中国新浪微博</a></li>
+            <li><a href="javascript:void(0);" ><div ><img src="./picture/ubi_qr.jpg"></div>育碧手游微信公众号</a></li>
+            <li><a href="javascript:void(0);" >育碧手游新浪微博</a></li>
+        </ul>
+    </section>
+    <div>
+        <div>
+            <div>
+               <div>
+                    <h3>Europe<span></span></h3>
+                    <div>
+                        <ul>
+                            <li class=""><a href="javascript:void(0);"><span>&nbsp;</span>Denmark - Danish</a></li>
+                            <li class=""><a href="javascript:void(0);"><span>&nbsp;</span>Finland - Finnish</a></li>
+                            <li class=""><a href="javascript:void(0);"><span>&nbsp;</span>France - French</a></li>
+                            <li class=""><a href="javascript:void(0);"><span>&nbsp;</span>Germany - German</a></li>
+                            <li class=""><a href="javascript:void(0);"><span>&nbsp;</span>Italy - Italian</a></li>
+                            <li class=""><a href="javascript:void(0);"><span>&nbsp;</span>Netherlands - Dutch</a></li>
+                            <li class=""><a href="javascript:void(0);"><span>&nbsp;</span>Norway - Norwegian</a></li>
+                            <li class=""><a href="javascript:void(0);"><span>&nbsp;</span>Poland - Polish</a></li>
+                            <li class=""><a href="javascript:void(0);"><span>&nbsp;</span>Russia - Russian</a></li>
+                            <li class=""><a href="javascript:void(0);"><span>&nbsp;</span>Spain - Spanish</a></li>
+                            <li class=""><a href="javascript:void(0);"><span>&nbsp;</span>Sweden - Swedish</a></li>
+                            <li class=""><a href="javascript:void(0);"><span>&nbsp;</span>U.K. - English</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div>
+                    <h3>North America<span></span></h3>
+                    <div>
+                        <ul>
+                            <li><a href="##"><span>&nbsp;</span>Canada - English</a></li>
+                            <li><a href="##"><span>&nbsp;</span>Canada - French</a></li>
+                            <li><a href="##"><span>&nbsp;</span>Mexico - Spanish</a></li>
+                            <li><a href="##"><span>&nbsp;</span>U.S. - English</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div>
+                    <h3>South America<span></span></h3>
+                    <div>
+                        <ul>
+                            <li><a href="##"><span>&nbsp;</span>Brazil - Portuguese</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div>
+                    <h3>Asia / Pacific<span></span></h3>
+                    <div>
+                        <ul>
+                            <li><a href="##"><span>&nbsp;</span>Australia - English</a></li>
+                              <li><a href="##"><span>&nbsp;</span>China - Simplified Chinese</a></li>
+                               <li><a href="##"><span>&nbsp;</span>Japan - Japanese</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="btn">
+                <button><span>&nbsp;</span>China - Simplified Chinese</button>
+            </div>
+        </div>
+    </div>
+    <div>
+        <ul>
+            <li><a href="##">关于我们</a></li>
+            <li>/</li>
+            <li><a href="##">联系我们</a></li>
+            <li>/</li>
+            <li><a href="##">加入我们</a></li>
+        </ul>
+    </div>
+    <div><p>©2006-2013 Ubisoft Entertainment. All Rights Reserved. Ubisoft, ubi.com, and the Ubisoft logo are trademarks of Ubisoft Entertainment in the U.S. and/or other countries.</p><p>上海碧汉网络科技有限公司 | 网络文化经营许可证沪网文: 【2013】0366-042号
+沪ICP备10013909号-11 | 增值电信业务经营许可证: B2-20100035</p>
+    </div>
+  </footer>
+</body>
+</html>

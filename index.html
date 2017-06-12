@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+  <head>
+    <meta charset="utf-8">
+    <title>首页</title>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1"> 
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="css/htmleaf-demo.css" media="all">
+    <link href="css/reset.css" rel="stylesheet">
+    <link href="css/index.css" rel="stylesheet">
+    <script src="js/jquery-1.7.2.js"></script>
+    <script src="js/index.js" defer></script>
+  </head>
+  <body> 
+  <header>
+  	<nav>
+  		<img src="./images/logo.jpg" alt="育碧网">
+  		<div>
+  			<span></span>
+  			<a href="#">搜索游戏</a>
+  		</div>
+       <button class="response">
+            <span></span>
+            <span></span>
+            <span></span>
+      </button>
+       <ol class="sub">
+        <li><a href="index.html">首页</a></li>
+        <li><a href="javascript:void(0);">游戏</a><button><span></span></button>
+        <li class="subnavs">
+            <div>主机游戏</div>
+            <div>PC游戏</div>
+            <div>移动游戏</div>
+            <div>VR游戏</div>
+        </li>
+        </li>
+        <li><a href="shop.html">商城</a></li>
+        <li><a href="javascript:void(0);">支持</a></li>
+      </ol>
+      <ul class="tran">
+        <li><a href="javascript:void(0);">首页</a></li>
+        <li><a href="javascript:void(0);">游戏</a><button><span></span></button>
+        </li>
+        <li><a href="shop.html">商城</a></li>
+        <li><a href="javascript:void(0);">支持</a></li>
+      </ul>
+  	</nav>
+    <!--二级菜单-->
+    <ul class="subnav">
+        <li><a href="javascript:void(0);">主机游戏</a></li>
+        <li><a href="javascript:void(0);">PC游戏</a></li>
+        <li><a href="javascript:void(0);">移动游戏</a></li>
+        <li><a href="javascript:void(0);">VR游戏</a></li>
+    </ul>
+    <!--搜索框-->
+    <div class="search" style="overflow: scroll;">
+     <input id="search" type="text" placeholder="请输入关键字">
+     <ol id="list"></ol>
+    </div>
+    <script>
+      var btn = document.getElementById('search');
+      function fn(data){
+
+      var li = '';
+      for(var i = 0 ; i < data.s.length;i++){
+
+      li+='<li>'
+        li+='<a target="_blank" href="#">'+data.s[i]+'</a>'
+      li+='</li>'
+
+    }
+
+    document.getElementById('list').innerHTML = li;
+    }
+
+    btn.onkeyup = function() {
+    var lianjie = document.createElement('script');
+    lianjie.src = 'https://sp0.baidu.com/5a1Fazu8AA54nxGko9WTAnF6hhy/su?wd='+this.value+'&sugmode=2&json=1&p=3&sid=22085_1437_12896_21081_17001_22037_21670_20930&req=2&pbs=aaa&csor=0&pwd=aaa&cb=fn';
+    document.body.appendChild(lianjie);
+  }
+
+    </script>
+    <!--轮播图-->
+   <div id="container" left="">
+      <div id="lists">
+          <img src="images/original_1477304245.png" alt="3"/>
+          <img src="images/original_1490080305.png" alt="1"/>
+          <img src="images/original_1468829400.png" alt="2"/>
+          <img src="images/original_1487055328.png" alt="3"/>
+          <img src="images/original_1490080305.png" alt="1"/>
+      </div>
+      <div id="buttons">
+          <span index="1" class="on"></span>
+          <span index="2"></span>
+          <span index="3"></span>
+      </div>
+      <a href="javascript:;" id="prev" class="arrow">&lt;</a>
+      <a href="javascript:;" id="next" class="arrow">&gt;</a>
+  </div>
+  </header>
+  <!--主体内容(新闻和销售)-->
+  <div class="main-1">
+  <!--主体内容(左新闻)-->
+    <div class="main-1-l">
+      <div>
+          新闻
+          <a href="javascript:void(0);">更多</a>
+      </div>
+      <div class="roll">
+          <div>
+              <a href="javascript:void(0);"><img src="./picture/original_1488167491.jpg" ></a>
+          </div>
+          <div>
+            <h3><a href="javascript:void(0);">《荣耀战魂》：首批挂机玩家账号已被封禁</a></h3>
+            <div>2017/03/16</div>
+            <p>这次，我们对1500名玩家进行了3天临时封禁的处罚，还对我们侦测到的约4000名初次犯规者发出了警告。而使用作弊工具进行“挂机牟利”的行为违背了我们的管理准则，这些玩家的账号可能会由于使用作弊软件而遭到永久封禁。</p>
+          </div>
+      </div>
+      <div class="roll">
+          <div><a href="javascript:void(0);"><img src="./picture/original_1489546153.jpg"></a>
+          </div>
+          <div>
+              <h3><a href="javascript:void(0);">《彩虹六号：围攻》赛季中期更新正式上线 Glaz获得热成像技能</a></h3>
+              <div>2017/03/15</div>
+
+              <p>育碧宣布《彩虹六号：围攻》最新的赛季中期更新将于今日上线。更新内容包括：GLAZ瞄准镜的重大调整，Twitch的精英套装，重做干员以及武器平衡。</p>
+          </div>
+      </div>
+      <div class="roll">
+            <div><a href="javascript:void(0);"><img src="./picture/original_1476437430.jpg"></a></div>
+            <div>
+
+                <h3><a>第二届《彩虹六号：围攻》职业联赛将于三月启动</a></h3>
+                <div>2017/03/10</div>
+
+              <p>育碧与全球最大电子竞技企业ESL联合宣布第二届《彩虹六号：围攻》职业联赛将相继在北美洲、欧洲以及巴西地区三地启动，具体日期分别为3月20日（北美洲）、3月23日（欧洲）以及3月25日（巴西）。</p>
+            </div>
+      </div>
+    </div>
+    <!--主体内容1(右销售)-->
+    <div class="main-1-r">
+        <div>
+            <ol>
+                <li>全球发售计划<div><span></span></div></li>
+            </ol>
+            <div>
+                <!--选项卡按钮-->
+                <ul class="chooses">
+                    <li class="choose"><a href="javascript:void(0);"></a></li>
+                    <li><a href="javascript:void(0);"></a></li>
+                </ul>
+                <!--选项卡内容-->
+                <div class="box">
+                    <ul>
+                        <li>
+                            <a><img src="picture/sp2.jpg"></a>
+                            <div><h3>南方公园：破碎完整<span>发布时间：2017</span></h3></div>
+                        </li>
+                        <li>
+                            <a><img src="picture/startrek.jpg"></a>
+                            <div><h3>星际迷航:舰桥成员<span>发布时间：2017-05-30</span></h3></div>
+                        </li>
+                        <li>
+                            <a><img src="picture/grw.png"></a>
+                            <div><h3>幽灵行动：荒野<span>发布时间：2017-03-07</span></h3></div>
+                        </li>
+                        <li>
+                            <a ><img src="picture/honor.jpg"></a>
+                            <div><h3>荣耀战魂<span>发布时间：2017-02-14</span></h3></div></li>
+                        <li>
+                            <a><img src="picture/steep.jpg"></a>
+                            <div><h3>极限巅峰<span>发布时间：2016-12</span></h3></div>
+                        </li>
+                        <li>
+                            <a><img src="picture/wd2.jpg"></a>
+                            <div><h3>看门狗2<span>发布时间：2016-11-29</span></h3></div>
+                        </li>
+                    </ul>
+                    <ul>
+                        <li>
+                          <a><img src="picture/jd2017.jpg"></a>
+                          <div><h3>舞力全开2017<span>发布时间：2016-10-27</span></h3></div>
+                        </li>
+                        <li>
+                          <a><img src="picture/ef.jpg"></a>
+                          <div><h3>雄鹰飞翔<span>发布时间：2016-10-18</span></h3></div>
+                        </li>
+                        <li>
+                          <a ><img  src="picture/growup.png"></a>
+                          <div><h3>Grow Up<span>发布时间：2016-08-16</span></h3></div>
+                        </li>
+                        <li>
+                          <a><img src="picture/tbd.jpg"></a>
+                          <div><h3>特技摩托：血龙试炼<span>发布时间：2016-06-15</span></h3></div></li>
+                        <li>
+                          <a><img src="picture/tctd.jpg"></a>
+                          <div><h3>全境封锁<span>发布时间：2016-03-08</span></h3></div>
+                        </li>
+                        <li>
+                          <a><img src="picture/fcp.jpg"></a>
+                          <div><h3>孤岛惊魂：野蛮纪源<span>发布时间：2016-02-23</span></h3></div>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+            <p>受限于中国法律法规所要求的审批，部分游戏在中国市场尚未有确定的发售计划。</p>
+        </div>
+    </div>
+  <!--主体内容2(热销产品和推荐玩家)-->
+  <div class="main-2" style="overflow: hidden;
+    background: #dfdfdf;">
+    <!--热销产品-->
+    <div class="main-2-l">
+      <div>
+        热销产品
+        <a href="javascript:void(0);">更多</a>
+      </div>
+      <div class="moves">
+        <div>
+          <a href="javascript:void(0);"><img src="./picture/original_1448938851.jpg" alt=""></a>
+          <div><h3><a href="javascript:void(0);">英雄无敌7完美典藏版</a></h3><p>现价：89.00 元</p></div>
+          <button>立即购买</button>
+        </div>
+        <div>
+          <a href="javascript:void(0);"><img src="./picture/original_1448938851.jpg" alt=""></a>
+          <div><h3><a href="javascript:void(0);">英雄无敌7[数字版]</a></h3><p>现价：60.00 元</p></div>
+          <button>立即购买</button>
+        </div>
+        <div>
+          <a href="javascript:void(0);"><img src="./picture/original_1426736429.jpg" alt=""></a>
+          <div><h3><a href="javascript:void(0);">光之子数字完整版</a></h3><p>市场价：180.00 元</p><p>现价：90.00 元</p></div>
+          <button>立即购买</button>
+        </div>
+      </div>
+    </div>
+    <!--推荐玩家-->
+    <div class="main-2-r">
+      <div>
+        本周推荐星玩家<a href="javascript:void(0);">更多</a><span id="span" style="
+    float: right;font-weight: normal;padding-right: 40px;"><span></span> 如何加入</span>
+      </div>
+      <div>
+        <div>
+          <img alt="Avatar_11" src="./picture/avatar_11.jpg">
+        </div>
+       <div>
+          <h2>loosebrian<img src="./picture/man.png"></h2><a href="javascript:void(0);">进入他的专区 &gt;&gt;</a><br><br>
+          <p><span>* 最喜欢的游戏：</span>波斯王子3,细胞分裂5,英雄无敌3,战火兄弟连：地狱公路</p>
+          <p><span>* 个人介绍：</span></p><p class="up">江西人，8岁时被表哥带入街机厅从此正式进军“游戏界”,成长过程接触了无数游戏也见证很多像 3DO、EA 、育碧、暴雪、Westwood 、Relic、等老牌厂商的兴衰。对游戏行业有一定独到的见解，除了游戏外还喜欢足球。现任职 中关村在线游戏频道编辑。</p>
+      </div>
+      </div>
+    </div>
+  </div>
+  <div class="clear"></div>
+  <!--精彩视频-->
+  <div class="main-4">
+      <div><a href="javascript:void(0);">精彩视频</a></div>
+      <div class="videos">
+        <div>
+          <a><img src="./picture/original_1489475213.jpg"></a>
+          <div>
+            <h3>《幽灵行动：荒野》发售宣传片</h3>
+            <div><span></span></div>
+          </div>
+        </div>
+      </div>
+      <div class="videos">
+        <div>
+          <a><img src="./picture/original_1486725050.jpg"></a>
+          <div>
+            <h3>《刺客信条》爆最新穿越版预告片</h3>
+            <div><span></span></div>
+          </div>
+        </div>
+      </div>
+      <div class="videos">
+        <div>
+          <a><img src="./picture/original_1484882693.jpg"></a>
+          <div>
+            <h3>《荣耀战魂》武士阵营——野武士！</h3>
+            <div><span></span></div>
+          </div>
+        </div>
+      </div>
+      <div class="videos">
+        <div>
+          <a><img src="./picture/original_1484292761.jpg"></a>
+          <div>
+            <h3>《幽灵行动：荒野》黑帮内战预告</h3>
+            <div><span></span></div>
+          </div>
+        </div>
+      </div>
+      <div class="videos">
+        <div>
+          <a><img src="./picture/original_1484292577.jpg"></a>
+          <div>
+            <h3>《荣耀战魂》“鲜红之路”宣传片</h3>
+            <div><span></span></div>
+          </div>
+        </div>
+      </div>
+      <div class="videos">
+        <div>
+          <a><img src="./picture/original_1484292181.jpg"></a>
+          <div>
+            <h3>《看门狗2》“丁骨混乱”活动短片</h3>
+            <div><span></span></div>
+          </div>
+        </div>
+      </div>
+      <div class="videos">
+        <div>
+          <a><img src="./picture/original_1481792036.jpg"></a>
+          <div>
+            <h3>《荣耀战魂》剧情预告片</h3>
+            <div><span></span></div>
+          </div>
+        </div>
+      </div>
+      <div class="move">
+          <div>
+            <a>
+            <img src="./picture/original_1481792036.jpg" style="opacity: 0;">
+            </a>
+            <p>更多</p>
+          </div>       
+      </div>
+  </div>
+  <div class="clear"></div>
+  <footer>
+  <section>
+        <ul class="Code">
+            <li><a href="javascript:void(0);" ><div><img src="./picture/ubi_mobile_qr.jpg"></div>育碧中国微信公众号</a></li>
+            <li><a href="javascript:void(0);" >育碧中国新浪微博</a></li>
+            <li><a href="javascript:void(0);" ><div ><img src="./picture/ubi_qr.jpg"></div>育碧手游微信公众号</a></li>
+            <li><a href="javascript:void(0);" >育碧手游新浪微博</a></li>
+        </ul>
+    </section>
+    <div>
+        <div>
+            <div>
+               <div>
+                    <h3>Europe<span></span></h3>
+                    <div>
+                        <ul>
+                            <li class=""><a href="javascript:void(0);"><span>&nbsp;</span>Denmark - Danish</a></li>
+                            <li class=""><a href="javascript:void(0);"><span>&nbsp;</span>Finland - Finnish</a></li>
+                            <li class=""><a href="javascript:void(0);"><span>&nbsp;</span>France - French</a></li>
+                            <li class=""><a href="javascript:void(0);"><span>&nbsp;</span>Germany - German</a></li>
+                            <li class=""><a href="javascript:void(0);"><span>&nbsp;</span>Italy - Italian</a></li>
+                            <li class=""><a href="javascript:void(0);"><span>&nbsp;</span>Netherlands - Dutch</a></li>
+                            <li class=""><a href="javascript:void(0);"><span>&nbsp;</span>Norway - Norwegian</a></li>
+                            <li class=""><a href="javascript:void(0);"><span>&nbsp;</span>Poland - Polish</a></li>
+                            <li class=""><a href="javascript:void(0);"><span>&nbsp;</span>Russia - Russian</a></li>
+                            <li class=""><a href="javascript:void(0);"><span>&nbsp;</span>Spain - Spanish</a></li>
+                            <li class=""><a href="javascript:void(0);"><span>&nbsp;</span>Sweden - Swedish</a></li>
+                            <li class=""><a href="javascript:void(0);"><span>&nbsp;</span>U.K. - English</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div>
+                    <h3>North America<span></span></h3>
+                    <div>
+                        <ul>
+                            <li><a href="##"><span>&nbsp;</span>Canada - English</a></li>
+                            <li><a href="##"><span>&nbsp;</span>Canada - French</a></li>
+                            <li><a href="##"><span>&nbsp;</span>Mexico - Spanish</a></li>
+                            <li><a href="##"><span>&nbsp;</span>U.S. - English</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div>
+                    <h3>South America<span></span></h3>
+                    <div>
+                        <ul>
+                            <li><a href="##"><span>&nbsp;</span>Brazil - Portuguese</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div>
+                    <h3>Asia / Pacific<span></span></h3>
+                    <div>
+                        <ul>
+                            <li><a href="##"><span>&nbsp;</span>Australia - English</a></li>
+                              <li><a href="##"><span>&nbsp;</span>China - Simplified Chinese</a></li>
+                               <li><a href="##"><span>&nbsp;</span>Japan - Japanese</a></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="btn">
+                <button><span>&nbsp;</span>China - Simplified Chinese</button>
+            </div>
+        </div>
+    </div>
+    <div>
+        <ul>
+            <li><a href="##">关于我们</a></li>
+            <li>/</li>
+            <li><a href="##">联系我们</a></li>
+            <li>/</li>
+            <li><a href="##">加入我们</a></li>
+        </ul>
+    </div>
+    <div><p>©2006-2013 Ubisoft Entertainment. All Rights Reserved. Ubisoft, ubi.com, and the Ubisoft logo are trademarks of Ubisoft Entertainment in the U.S. and/or other countries.</p><p>上海碧汉网络科技有限公司 | 网络文化经营许可证沪网文: 【2013】0366-042号
+沪ICP备10013909号-11 | 增值电信业务经营许可证: B2-20100035</p>
+    </div>
+  </footer>
+  </body>
+
+</html>

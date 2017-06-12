@@ -1,0 +1,211 @@
+@charset "utf-8";
+body{
+	background: url(../images/bg.jpg);
+    background-size: cover;
+    background-attachment: fixed;
+}
+nav{	
+		width: 100%;
+		height: 50px;
+		overflow: hidden;
+		background-color: #080808;
+		position:fixed;
+		top:0;
+		border-bottom: 1px solid #000;
+        z-index:999;
+		>img{
+			float: left;
+			height: 50px;
+		}
+		>ul{
+			width: 500px;
+			margin:0 auto;
+			height: 50px;
+			>li{
+				float: left;
+				>a{
+					color: #9d9d9d;
+					display: block;
+					padding:17px 15px;
+				}
+			}
+		}
+		>div{
+			float:right;
+			height: 50px;
+			width: 15%;
+			background-color: #666;
+			color: #fff;
+			line-height: 50px;
+			text-align: center;
+			font-size: 14px;
+			>a{
+				color: #fff;
+				font-size: 14px;
+			}
+		}
+	}
+nav:after{
+	content: '';
+	clear: both;
+}
+.login{
+	max-width: 800px;
+    background: #fff;
+    margin: 0px auto;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    position: relative;
+    padding-top: 145px;
+    >div:first-of-type{
+    		height: 95px;
+		    width: 100%;
+		    top: 50px;
+		    background: #144357;
+		    position: absolute;
+		    text-align: center;
+    	>img{
+    		vertical-align: middle;
+
+    	}
+    }
+    >div:last-of-type{
+    	width: 80%;
+    	margin:0 auto;
+    	>h2{
+    		height: 90px;
+		    line-height: 90px;
+		    font-size: 30px;
+		    text-align: center;
+		    margin-bottom: 5px;
+    	}
+    	>h3{
+    		line-height: 20px;
+		    font-size: 16px;
+		    text-align: center;
+		    color: #3fa74e;
+		    margin-bottom: 10px;
+    	}
+    	>form{
+    		>table{
+    			>tbody{
+    				>tr{
+    					>td{
+    						height:40px;
+    						>label{
+    							    display: inline-block;
+								    max-width: 100%;
+								    margin-bottom: 5px;
+    						}
+    						>input[type='text'],input[type='password']{
+    								height: 35px;
+    								width:300px;
+    							    background: #fff;
+								    border: 1px solid #9d9d9d;
+								    color: #666; 
+								    padding:0 0 0 10px;
+    						}
+    						>a{
+    							color: #3fa74e;
+    						}
+    					}
+    				}
+    			}
+    		}
+    	}
+    	>div{
+    			width: 90%;
+    			height: 30px;
+    			margin-bottom: ;
+    			margin:5px auto;
+
+    	}
+    	>div:first-of-type{
+            >a{
+                float: left;
+                margin-top: 2px;
+                margin-right: 3px;
+            }
+            > div{
+                float: left;
+                >button{
+                    float: left;
+
+                }
+                >img{
+                    float: right;
+                    margin-left: 10px;
+                }
+
+            }
+    	}
+    	>div:nth-of-type(2){
+    		height: 10px;
+            input{
+                float: left;
+            }
+            >p{
+                margin-top: -2px;
+                margin-left:5px;
+                float:left;
+            }
+    	}
+    	>div:nth-of-type(3){
+    		text-align: center;
+    		margin-top: 20px;	
+            height: 50px;
+            width: 100%;
+            background: #3fa74e;
+            border: 1px solid #298941; 
+            input{
+                border: 0;
+                color: #fff;
+                height: 50px;
+                width: 100%;
+                background: #3fa74e;
+                border: 1px solid #298941; 
+            }
+    		
+    	}
+    	>div:last-of-type{
+			padding: 20px 0px 100px 80px;
+    		color: #999999;
+    		position: relative;
+    		font-size: 14px;
+    		>div:after{
+    			    content: "温馨提示：";
+				    color: #ba4242;
+				    position: absolute;
+				    left: 0px;
+				    top: 20px;
+    		}
+    	}
+    }
+}
+footer{
+	background-color: #000;
+    width: 100%;
+    color: #999999;
+    text-align: center;
+    padding: 30px;
+    >div{
+    	color: #999999;
+   		text-align: center;
+   		font-size: 14px;
+   		ul{
+   			margin-bottom: 10px;
+   			>li{
+   				display: inline-block;
+   				>a{
+   					color: #999;
+   				}
+   			}
+   		}
+   		p{
+   			margin-bottom: 10px;
+   			a{
+   				color: #999;
+   			}
+   		}
+    }
+}
